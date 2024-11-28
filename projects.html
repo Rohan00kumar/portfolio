@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>My Projects</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-buttons button {
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body .btn {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex flex-column justify-content-center">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+                <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+                <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+                <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+                <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects" class="project section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Projects</h2>
+            <p>Explore my portfolio of projects spanning web development, AI, and more.</p>
+        </div>
+        <!-- Filter Buttons -->
+        <div class="filter-buttons" data-aos="fade-up">
+            <button class="btn btn-outline-primary" onclick="filterProjects('all')">All</button>
+            <button class="btn btn-outline-secondary" onclick="filterProjects('web')">Web Development</button>
+            <button class="btn btn-outline-success" onclick="filterProjects('ml')">Machine Learning</button>
+            <button class="btn btn-outline-info" onclick="filterProjects('ai')">Artificial Intelligence</button>
+        </div>
+
+        <!-- Project Cards -->
+        <div class="container">
+            <div class="row gy-4" id="project-container">
+
+                <!-- Project 1 -->
+                <div class="col-lg-4 project-card" data-category="web" data-aos="fade-up">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text">A responsive personal portfolio showcasing my projects and skills using
+                                HTML, CSS, and Bootstrap.</p>
+                            <a href="https://github.com/yourusername/portfolio" class="btn btn-primary"
+                                target="_blank">View Code</a>
+                            <a href="#" class="btn btn-secondary">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 project-card" data-category="ml" data-aos="fade-up">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sentiment Analysis</h5>
+                            <p class="card-text">Built a sentiment analysis tool using Python and the Random Forest
+                                algorithm to analyze social media data.</p>
+                            <a href="https://github.com/yourusername/sentiment-analysis" class="btn btn-primary"
+                                target="_blank">View Code</a>
+                            <a href="#" class="btn btn-secondary">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 project-card" data-category="ai" data-aos="fade-up">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Chatbot</h5>
+                            <p class="card-text">Developed an AI-powered chatbot for customer service using Python and
+                                NLP libraries.</p>
+                            <a href="https://github.com/yourusername/ai-chatbot" class="btn btn-primary"
+                                target="_blank">View Code</a>
+                            <a href="#" class="btn btn-secondary">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects as needed -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-card');
+            projects.forEach(project => {
+                if (category === 'all' || project.getAttribute('data-category') === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
